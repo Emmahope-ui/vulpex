@@ -1,0 +1,152 @@
+/* ===== Vulpex styles ===== */
+:root{
+  --forest:#0d4a2b;--leaf:#6ab023;--fox:#ff5a14;--paper:#fbfcf8;--ink:#14231a;--mist:#eef3e8;--muted:#51634f;--r:18px;
+  --max:1250px;                                   /* content width; grows on big screens */
+  --pad:max(5vw,calc((100vw - var(--max))/2));    /* side padding that centres content */
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{font:1rem/1.65 'DM Sans',system-ui,sans-serif;font-size:clamp(16px,.35vw + 15px,20px);color:var(--ink);background:var(--paper);overflow-x:hidden}
+img{max-width:100%;display:block}
+h1,h2,h3,.brand{font-family:'Bricolage Grotesque',sans-serif;line-height:1.1}
+h1{font-size:clamp(2.2rem,5.5vw,4.8rem);font-weight:800;color:var(--forest)}
+h2{font-size:clamp(1.7rem,3.4vw,3rem);font-weight:800;color:var(--forest);margin-bottom:.6em}
+h3{font-size:1.2rem;margin-bottom:.3em}
+p+p{margin-top:1em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--fox);outline-offset:3px}
+
+/* Navigation */
+.nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:10px var(--pad);background:rgba(251,252,248,.94);backdrop-filter:blur(8px);border-bottom:1px solid #e1e8da}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:1.5rem;color:var(--forest)}
+.brand img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+nav{display:flex;align-items:center;gap:clamp(14px,2vw,28px)}
+nav a{text-decoration:none;font-weight:500;white-space:nowrap}
+nav a:not(.btn):hover{color:var(--fox)}
+.burger{display:none;background:none;border:0;padding:10px;cursor:pointer}
+.burger span{display:block;width:26px;height:3px;background:var(--forest);margin:5px 0;border-radius:3px}
+
+/* Buttons */
+.btn{display:inline-block;background:var(--fox);color:#fff;border:0;padding:14px 26px;min-height:48px;border-radius:50px;font:700 1rem 'DM Sans',sans-serif;text-align:center;text-decoration:none;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{background:#e04a08;transform:translateY(-2px)}
+.btn.small{padding:9px 20px;min-height:0}
+.btn.ghost{background:transparent;color:var(--forest);box-shadow:inset 0 0 0 2px var(--forest)}
+.btn.ghost:hover{background:var(--forest);color:#fff}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:clamp(24px,4vw,60px);padding:clamp(40px,6vw,90px) var(--pad) clamp(40px,5vw,70px)}
+.hero-text>*{animation:rise .7s both}
+.hero-text>*:nth-child(2){animation-delay:.12s}.hero-text>*:nth-child(3){animation-delay:.24s}.hero-text>*:nth-child(4){animation-delay:.36s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}}
+.hero-text p{font-size:1.2rem;color:var(--muted);margin:22px 0 28px;max-width:34em}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-text .open{font-size:.95rem;margin-top:26px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.dot{width:10px;height:10px;flex:none;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 0 var(--leaf);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px transparent}}
+.hero-art{position:relative;display:grid;place-items:center;width:100%;max-width:560px;justify-self:center}
+.ring{position:absolute;width:92%;aspect-ratio:1;border-radius:50%;background:var(--forest)}
+.hero-art img{position:relative;width:78%;border-radius:50%;background:#fff;box-shadow:0 20px 50px rgba(0,0,0,.25);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px)}}
+
+/* Stats strip */
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;background:var(--forest);color:#fff;padding:36px var(--pad);text-align:center}
+.strip b{font:800 clamp(2rem,4vw,2.8rem) 'Bricolage Grotesque'}
+.strip small{display:block;color:#bcd9a8;font-size:.95rem}
+
+/* Sections */
+.sec{padding:clamp(56px,7vw,100px) var(--pad)}
+.alt{background:var(--mist)}
+.lead{color:var(--muted);margin-bottom:26px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,70px);align-items:start}
+.pillars{list-style:none;display:grid;gap:18px;padding:0}
+.pillars li{display:flex;gap:16px;padding:20px;background:#fff;border-radius:var(--r);border-left:6px solid var(--leaf)}
+.pillars li:nth-child(2){border-color:var(--fox)}
+.pillars span{font-size:2rem}
+
+/* Service tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.tabs button{border:2px solid var(--forest);background:transparent;color:var(--forest);padding:10px 20px;min-height:44px;border-radius:50px;font:700 .95rem 'DM Sans';cursor:pointer;transition:.2s}
+.tabs button.on,.tabs button:hover{background:var(--forest);color:#fff}
+.panel{display:none;gap:28px;background:#fff;padding:clamp(22px,3vw,40px);border-radius:var(--r)}
+.panel.on{display:flex;animation:rise .4s both}
+.ico{font-size:3.4rem;width:96px;height:96px;flex:none;display:grid;place-items:center;background:var(--mist);border-radius:50%}
+.panel ul{margin:16px 0 0 20px}.panel li{margin-bottom:6px}
+
+/* Sorter */
+.items{display:flex;flex-wrap:wrap;gap:12px}
+.items button{background:#fff;border:2px solid #d6e0cd;padding:12px 20px;min-height:48px;border-radius:50px;font:500 1rem 'DM Sans';cursor:pointer;transition:.2s}
+.items button:hover{border-color:var(--leaf)}
+.items button.on{border-color:var(--fox);background:#fff4ee}
+.answer{margin-top:24px;padding:20px 24px;background:var(--mist);border-radius:var(--r);font-size:1.1rem;border-left:6px solid var(--leaf)}
+
+/* Steps, why, FAQ */
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.steps li{counter-increment:s;background:#fff;padding:26px;border-radius:var(--r)}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--fox);color:#fff;font-weight:800;margin-bottom:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.grid3>div{padding:8px 0 8px 20px;border-left:4px solid var(--leaf)}
+.faq{max-width:900px}
+.faq details{background:#fff;border-radius:14px;margin-bottom:12px;padding:18px 22px}
+.faq summary{font-weight:700;cursor:pointer}
+.faq details[open] summary{color:var(--fox)}
+.faq p{margin-top:10px;color:var(--muted)}
+
+/* Contact */
+.people{display:grid;gap:16px;margin-top:26px}
+.people>div{padding:20px;background:var(--mist);border-radius:var(--r)}
+.people p{color:var(--muted);margin:0 0 6px}
+.people a{display:inline-block;padding:4px 0;font-weight:700;color:var(--fox);text-decoration:none;font-size:1.2rem}
+form{display:grid;gap:16px;background:var(--forest);padding:clamp(22px,3vw,40px);border-radius:var(--r);color:#fff}
+label{display:grid;gap:6px;font-weight:500}
+input,select,textarea{width:100%;padding:12px 14px;border:0;border-radius:10px;font:inherit;font-size:16px;color:var(--ink)} /* 16px stops iOS zoom */
+footer{background:var(--ink);color:#c5d3c0;text-align:center;padding:40px var(--pad);display:grid;gap:8px;justify-items:center}
+footer .brand{color:#fff}
+
+/* ===== Large screens ===== */
+@media(min-width:1500px){:root{--max:1400px}}
+@media(min-width:2000px){:root{--max:1700px}.hero-art{max-width:700px}}
+@media(min-width:2600px){:root{--max:2100px}}
+
+/* ===== Laptops and tablets landscape ===== */
+@media(max-width:1100px){
+  .steps{grid-template-columns:1fr 1fr}
+}
+
+/* ===== Tablets portrait: switch to burger menu ===== */
+@media(max-width:960px){
+  .burger{display:block}
+  nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;text-align:center;background:var(--paper);padding:20px;gap:6px;border-bottom:1px solid #e1e8da;display:none;max-height:calc(100vh - 70px);overflow-y:auto}
+  nav.open{display:flex}
+  nav a{padding:12px}
+  nav .btn{margin-top:8px}
+  .hero,.two{grid-template-columns:1fr}
+  .hero-art{max-width:400px}
+  .strip{grid-template-columns:1fr 1fr}
+  .grid3{grid-template-columns:1fr}
+  .panel.on{flex-direction:column}
+}
+
+/* ===== Phones ===== */
+@media(max-width:560px){
+  .brand{font-size:1.3rem}.brand img{width:38px;height:38px}
+  .hero-text p{font-size:1.05rem}
+  .cta .btn{width:100%}
+  .strip{gap:26px 12px;padding:30px 5vw}
+  .steps{grid-template-columns:1fr}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;margin-right:-5vw;padding-right:5vw;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+  .tabs button{flex:none}
+  .items button{flex:1 1 calc(50% - 12px);padding:12px 10px}
+  .ico{width:76px;height:76px;font-size:2.6rem}
+  .pillars li{padding:16px}
+}
+
+/* ===== Very small phones ===== */
+@media(max-width:360px){
+  .strip{grid-template-columns:1fr}
+  .items button{flex-basis:100%}
+}
+
+/* Landscape phones: don't let the sticky nav eat the screen */
+@media(max-height:480px) and (orientation:landscape){.nav{position:static}}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
