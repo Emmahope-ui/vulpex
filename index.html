@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vulpex | Waste Management & Recycling in Ghana</title>
+<meta name="description" content="Vulpex provides reliable waste collection, organic waste valorization and waste-to-energy partnerships for universities and communities in Ghana.">
+<link rel="icon" href="images/logo.jpeg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="nav" id="top">
+  <a class="brand" href="#top"><img src="images/logo.jpeg" alt="Vulpex fox logo"><span>Vulpex</span></a>
+  <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav id="menu">
+    <a href="#about">About</a><a href="#services">Services</a><a href="#sort">Sort it</a>
+    <a href="#process">How it works</a><a href="#faq">FAQ</a>
+    <a class="btn small" href="#contact">Request pickup</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Waste goes in. <br>Value comes out.</h1>
+    <p>Vulpex keeps Ghana’s campuses clean by collecting waste reliably and turning it into compost, energy and local business.</p>
+    <div class="cta"><a class="btn" href="#contact">Request a pickup</a><a class="btn ghost" href="#services">See our services</a></div>
+    <p class="open"><span class="dot"></span>Open 24/7. Call <a href="tel:+233209644703">020 964 4703</a></p>
+  </div>
+  <div class="hero-art"><div class="ring"></div><img src="images/logo.jpeg" alt="Vulpex fox logo with a green recycling arrow"></div>
+</section>
+
+<section class="strip">
+  <div><b data-count="24">0</b>/<b data-count="7">0</b><small>always on call</small></div>
+  <div><b data-count="4">0</b><small>core services</small></div>
+  <div><b data-count="16">0</b><small>regions of Ghana in our sights</small></div>
+  <div><b data-count="1">0</b><small>mission: zero waste to nowhere</small></div>
+</section>
+
+<section class="sec" id="about">
+  <div class="two">
+    <div>
+      <h2>Cleaner campuses, stronger communities</h2>
+      <p>Vulpex is an emerging waste management and environmental sustainability company. We provide efficient, reliable and sustainable solutions in Ghana, starting with universities and tertiary institutions.</p>
+      <p>We promote responsible disposal, recycling and waste valorization, which means turning waste into valuable resources. The result is better sanitation, a protected environment and new economic opportunities across Ghana and Africa.</p>
+    </div>
+    <ul class="pillars">
+      <li><span>🌍</span><div><h3>Environment</h3><p>Less litter, less landfill, healthier surroundings.</p></div></li>
+      <li><span>🧼</span><div><h3>Sanitation</h3><p>Consistent collection that keeps spaces safe to live and study in.</p></div></li>
+      <li><span>💼</span><div><h3>Opportunity</h3><p>Jobs and markets built on what others throw away.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec alt" id="services">
+  <h2>What we do</h2>
+  <p class="lead">Select a service to see how it works.</p>
+  <div class="tabs" role="tablist">
+    <button class="on" data-tab="0">Collection</button><button data-tab="1">Organic valorization</button>
+    <button data-tab="2">Waste to energy</button><button data-tab="3">Local markets</button>
+  </div>
+  <div class="panels">
+    <article class="panel on"><div class="ico">🚛</div><div><h3>Waste collection and management</h3><p>Scheduled and on-demand pickups with clearly labelled bins for general, recyclable and organic waste. We serve halls of residence, lecture blocks, canteens and offices.</p><ul><li>Flexible schedules, including 24/7 emergency pickups</li><li>Bin placement and sorting guidance on site</li><li>Regular reports on volumes collected</li></ul></div></article>
+    <article class="panel"><div class="ico">🌱</div><div><h3>Organic waste valorization</h3><p>Food scraps and plant waste are too useful to bury. We convert them into compost and soil enrichers that farms and gardens can use.</p><ul><li>Canteen and market food waste diverted from landfill</li><li>Compost for campus gardens and local farmers</li><li>Less odour and fewer pests where waste is handled</li></ul></div></article>
+    <article class="panel"><div class="ico">⚡</div><div><h3>Waste to energy partnerships</h3><p>We work with energy partners who turn non-recyclable waste into power and heat, so what cannot be reused still serves a purpose.</p><ul><li>Partnerships with energy and biogas providers</li><li>Reliable supply of sorted feedstock</li><li>Open to institutions that want to host projects</li></ul></div></article>
+    <article class="panel"><div class="ico">🏪</div><div><h3>Local market opportunities</h3><p>Recovered plastics, paper, metals and compost find buyers close to home, creating income for collectors, artisans and small businesses.</p><ul><li>Buy-back links for recyclable materials</li><li>Work for local collectors and sorters</li><li>Products and materials that stay in the local economy</li></ul></div></article>
+  </div>
+</section>
+
+<section class="sec" id="sort">
+  <h2>Where does it go?</h2>
+  <p class="lead">Tap an item to find the right bin.</p>
+  <div class="items">
+    <button data-bin="Recycling bin" data-note="Rinse it and flatten it first.">🧴 Plastic bottle</button>
+    <button data-bin="Organic bin" data-note="Goes to compost.">🍌 Banana peel</button>
+    <button data-bin="Recycling bin" data-note="Keep paper dry and clean.">📰 Newspaper</button>
+    <button data-bin="Recycling bin" data-note="Empty cans are sold to metal buyers.">🥫 Metal can</button>
+    <button data-bin="Organic bin" data-note="Leftovers feed our compost.">🍚 Food leftovers</button>
+    <button data-bin="General bin" data-note="Not recyclable. Some of it can go to waste-to-energy.">🍬 Sweet wrapper</button>
+  </div>
+  <p class="answer" id="answer" aria-live="polite">Pick an item above.</p>
+</section>
+
+<section class="sec alt" id="process">
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li><h3>You request</h3><p>Call, message or use the form below.</p></li>
+    <li><h3>We collect</h3><p>Our team picks up and sorts at the source.</p></li>
+    <li><h3>We transform</h3><p>Organics become compost, recyclables go to buyers, the rest to energy partners.</p></li>
+    <li><h3>You see the impact</h3><p>Cleaner spaces and a community that benefits.</p></li>
+  </ol>
+</section>
+
+<section class="sec" id="why">
+  <h2>Why Vulpex</h2>
+  <div class="grid3">
+    <div><h3>Always available</h3><p>Open 24 hours, every day of the year.</p></div>
+    <div><h3>Built for campuses</h3><p>We understand student life, term calendars and shared spaces.</p></div>
+    <div><h3>Waste with a purpose</h3><p>Every stream has a next use, from compost to power.</p></div>
+  </div>
+</section>
+
+<section class="sec alt" id="faq">
+  <h2>Questions</h2>
+  <div class="faq">
+    <details><summary>Who do you serve?</summary><p>We start with universities and tertiary institutions in Ghana, and also work with other organisations and communities.</p></details>
+    <details><summary>Can I request a pickup at night?</summary><p>Yes. We work 24/7, so call or message us at any hour.</p></details>
+    <details><summary>What happens to the waste you collect?</summary><p>Organic waste is composted, recyclables are sold on, and what is left goes to waste-to-energy partners.</p></details>
+    <details><summary>How can my institution partner with you?</summary><p>Contact our CEO or CFO below and we will arrange a visit to assess your needs.</p></details>
+  </div>
+</section>
+
+<section class="sec contact" id="contact">
+  <div class="two">
+    <div>
+      <h2>Talk to us</h2>
+      <p>Tell us what you need and we will respond quickly. We are open 24/7.</p>
+      <div class="people">
+        <div><h3>Combert Owusu Afriyie</h3><p>Chief Executive Officer</p><a href="tel:+233209644703">020 964 4703</a></div>
+        <div><h3>Emmett Boateng Gyimah</h3><p>Chief Financial Officer</p><a href="tel:+233503317401">050 331 7401</a></div>
+      </div>
+    </div>
+    <form id="form">
+      <label>Your name<input name="name" required></label>
+      <label>Service<select name="service"><option>Waste collection</option><option>Organic waste valorization</option><option>Waste to energy partnership</option><option>Local market opportunities</option></select></label>
+      <label>Location<input name="place" placeholder="e.g. campus, hall or area" required></label>
+      <label>Message<textarea name="msg" rows="3"></textarea></label>
+      <button class="btn" type="submit">Send on WhatsApp</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <a class="brand" href="#top"><img src="images/logo.jpeg" alt=""><span>Vulpex</span></a>
+  <p>Waste management and recycling, Ghana. Open 24/7.</p>
+  <p>© <span id="yr"></span> Vulpex. All rights reserved.</p>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
